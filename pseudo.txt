@@ -1,0 +1,63 @@
+
+create 3d character array (7 marvel characters, 7 DC characters)
+
+main METHOD
+
+    set game to true
+    set play to true
+
+    WHILE play is true
+        create a parallel array for lives that makes random floats from 15-40 for each characater
+        call on call_players method
+
+
+        get a random opponent
+        call on get_attacks method to get attacks for opponent and player
+        call on get_life method to get lives for opponent and player
+
+        WHILE gameplay is true
+            check if the user or opponent life is less than 0
+                IF less than 0 print out winner (character w/ life grater than 0)
+                    ask user if they want to play again
+                    IF user wants to play again break current loop
+                    IF not then end outer and inner loop
+
+
+call_players METHOD:
+
+    enter first dim of charac array
+        enter second dim of charac array
+            get the player and attacks from the iterating array
+            use position of the array in second dim to get the lives from parallel array (lives)
+
+            print out the player name, attacks and life
+
+
+get_attacks METHOD takes params playerName
+
+    enter the first dim of charac array
+        enter second dim of charac array
+            if playerName matches the player in the iterating array return the attacks from the current array
+
+get_life METHOD
+HOD takes params playerName
+
+    enter first dim of charac array
+        enter second dim of charac array
+            use position(index) of the current iterating array to get the corresponding life from lives array
+
+            return the life
+
+
+battle METHOD
+    set a random attack hit between 1 and 5 for opponent and player
+
+    ask the user to enter a num 1-3 to choose a character attack
+
+    subtract hit from the user/opponent life and print out the attack that was used
+
+
+
+
+
+
